@@ -1,9 +1,10 @@
 import styles from "./Input.module.css"
-const InputFood=()=>{
+const InputFood=({handleOnChange})=>{
+ 
   return(
     <>
     <input type="text" placeholder="Enter the Food Item here" className={styles.inputFood}
-    onChange={(event)=>console.log(event.target.value)} />
+    onChange={handleOnChange} />
     </>
   )
 }
