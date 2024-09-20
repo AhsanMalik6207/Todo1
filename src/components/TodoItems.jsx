@@ -1,10 +1,12 @@
 import TodoItem from "./TodoItem"
 
-const TodoItems=({multiTodoItem})=>{
+const TodoItems=({todoItems})=>{
+  console.log("this is TodoItems",todoItems)
   return(
     <>
     <div className="items-container">
-    {multiTodoItem.map(item=><TodoItem todoDate={item.todoDate} todoName={item.todoName}/>)}
+    { 
+    todoItems.map(item=><TodoItem todoDate={item.todoDate} todoName={item.todoName}/>)}
     </div>
       
     </>
