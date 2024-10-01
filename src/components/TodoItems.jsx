@@ -1,7 +1,10 @@
+import { useContext } from "react"
 import TodoItem from "./TodoItem"
+import { TodoItemsContext } from "../store/todoItem-store"
 
-const TodoItems=({todoItems})=>{
-  console.log("this is TodoItems",todoItems)
+const TodoItems=()=>{
+  const {todoItems} =useContext(TodoItemsContext)
+  // console.log("this is TodoItems",todoItems)
   return(
     <>
     <div className="items-container">
